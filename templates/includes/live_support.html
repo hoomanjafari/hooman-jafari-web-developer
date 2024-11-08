@@ -1,0 +1,41 @@
+<div class="live-support-icon" id="live-support-icon">
+    <img alt="live-support-image" src="/static/images/comments.png">
+</div>
+
+<section class="live-support-container" id="live-support-container">
+    <div class="support-chat-box animate">
+        <div class="support-box-header">
+            <button class="live-support-close-btn" id="live-support-close-btn"><i class="fa fa-window-close"></i></button>
+            <div class="admin-status" id="admin-status">
+                <p id="admin-status-p"><span id="admin-status-span"></span> پاسخگوی سوالات شما هست </p>
+            </div>
+            <div class="support-form" id="support-form">
+                <form>
+                    {% csrf_token %}
+                    <p>* لطفا شماره تماس خود را وارد کنید تا بتوانید از پشتیبانی انلاین استفاده کنید</p>
+                    <input id="support-user-name" type="text" placeholder=" ایمیل ...">
+                    <input id="support-user-number" type="number" placeholder="شماره تماس ...">
+                    <button id="send-user-info" type="button">شروع</button>
+                </form>
+            </div>
+            <div class="indicator" id="indicator">
+                <p class="isTyping"><span>هومان</span> is typing</p>
+                <span class="indic">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+        </div>
+        <div class="support-chatting" id="support-chatting">
+            <p class="no-admin-user-msg" id="no-admin-user-msg">لطفا پیام خودتون رو بنویسید زمانی که ادمین انلاین شد جوابتون رو میده</p>
+            <div class="admin-message animate" id="admin-1st-message">
+                سلام چه کمکی می تونم بهتون بکنم ؟
+            </div>
+        </div>
+        <form class="support-chatting-form" id="support-chatting-form">
+            <button id="chat-send-btn" type="button">ارسال</button>
+            <textarea class="support-chatting-textarea" id="support-chatting-textarea" rows="1"></textarea>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,396 @@
+@import url('/static/Fonts/font-awesome-4.7.0/css/font-awesome.min.css');
+@import url('/static/css/navbars.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.chat-white-space {
+    height: 3vw;
+}
+
+.logout-disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 40%;
+}
+
+/*--------------------------------------------------------------------*/
+
+.admin-chat-container {
+    padding: 4vw 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-chat-box {
+    width: 80vw;
+    height: 35vw;
+    background-color: #f1f7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-left-side {
+    width: calc(100% / 3.5);
+    background-color: #d7ecff;
+    height: 100%;
+}
+
+.admin-chat-box header {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    background-color: #002b53;
+    padding: 1vw 0;
+}
+
+.admin-name {
+    font-size: 1.6vw;
+    font-weight: 600;
+    color: white;
+    border-bottom: 1px solid #d7ecff;
+}
+
+.admin-online-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    background-color: white;
+    padding: 0 1vw;
+    border-radius: 6vw;
+    cursor: pointer;
+}
+
+
+.admin-online-status p {
+    font-size: 1.6vw;
+}
+
+.online-indicator {
+    width: 1vw;
+    height: 1vw;
+    background-color: #e70e32;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.online-indicator-color {
+    background-color: #00d200;
+}
+
+.remove-chat-connections-btn {
+    background: none;
+    border: none;
+    font-size: 1.6vw;
+    color: white;
+    cursor: pointer;
+}
+
+.three-dots-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+.remove-chat-connections-btn:hover,
+.admin-online-status:hover,
+.three-dots-btn:hover,
+.three-dots-options a:hover {
+    opacity: 60%;
+    transition: 0.3s;
+}
+
+.three-dots-options {
+    position: absolute;
+    right: -13.5vw;
+    top: 0;
+    width: 13vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #002b53;
+    border-radius: 1vw;
+    visibility: hidden;
+}
+
+.display-toggle {
+    visibility: visible;
+}
+
+.three-dots-options a {
+    color: white;
+    font-size: 1.6vw;
+    width: 10vw;
+    text-align: center;
+    padding: 1vw;
+    border-bottom: 1px solid white;
+}
+
+.remove-chat-connections-btn:active {
+    color: #c02727;
+}
+
+.admin-online-status:active {
+    background-color: #c02727;
+    transition: 0.2s;
+}
+
+.users-requested {
+    padding: 1vw;
+    overflow-y: scroll;
+    height: 28vw;
+
+}
+
+.user-info {
+    padding: 1vw;
+    margin: 1vw 0;
+    /*border-bottom: 2px solid #002b53;*/
+    background-color: white;
+    border-radius: 1vw;
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.user-info:hover {
+    opacity: 100%;
+    transition: 0.3s;
+}
+
+.user-info:active {
+    background-color: #c02727;
+    transition: 0.3s;
+}
+
+
+.user-info p {
+    color: #002b53;
+    font-size: 1.6vw;
+}
+
+.chat-right-side {
+    width: calc(calc(100% / 1.5) - 3vw);
+    height: 88%;
+    margin: 0 1.5vw;
+    padding: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-template {
+    overflow-y: scroll;
+    height: 23vw;
+    background-color: white;
+    padding: 2vw;
+    width: 100%;
+    border: 3px solid #002b53;
+}
+
+.admin-message-input {
+    display: flex;
+    width: 100%;
+    margin: 1vw 0;
+}
+
+.admin-message-input button {
+    border: 2px solid #002b53;
+    background-color: #002b53;
+    color: white;
+    font-size: 1.6vw;
+    width: 10vw;
+    cursor: pointer;
+}
+
+.admin-message-input button:hover {
+    opacity: 60%;
+    transition: 0.3s;
+}
+
+.admin-message-input button:active {
+    transform: translate(7px);
+    transition: 0.1s;
+}
+
+
+.admin-message-input textarea {
+    width: 100%;
+    resize: none;
+    outline: none;
+    border: 2px solid #002b53;
+    font-size: 1.6vw;
+    padding: 0.5vw;
+}
+
+.admin-chat {
+    margin-left: auto;
+    margin-bottom: 2vw;
+    width: 20vw;
+    background-color: #002b53;
+    color: white;
+    padding: 1vw;
+    border-radius: 2vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    line-height: 2vw;
+}
+
+.user-chat {
+    width: 20vw;
+    margin-bottom: 2vw;
+    background-color: #d7ecff;
+    color: #002b53;
+    padding: 1vw;
+    border-radius: 2vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    line-height: 2vw;
+}
+
+.time-size {
+    font-size: 1.1vw;
+}
+
+@media (max-width: 1023.98px) {
+    .admin-chat-container {
+        padding: 8vw 0;
+    }
+
+    .admin-chat-box {
+        width: 90%;
+        height: 170vw;
+    }
+
+    .admin-chat-box header {
+        padding: 2vw 0;
+        flex-wrap: wrap;
+    }
+
+    .chat-left-side {
+        width: calc(100% / 2.5);
+        background-color: #d7ecff;
+        height: 100%;
+    }
+
+    .admin-name {
+        font-size: 3.6vw;
+        margin-bottom: 2vw;
+        padding: 0 3vw;
+    }
+
+    .admin-online-status {
+        gap: 1vw;
+        padding: 0 4vw;
+        margin: 3vw;
+    }
+
+    .admin-online-status p {
+        font-size: 4vw;
+        margin: 0 2vw;
+        padding: 1vw 2vw;
+    }
+
+    .remove-chat-connections-btn {
+        font-size: 7vw;
+    }
+
+    .three-dots-btn {
+        font-size: 7vw;
+    }
+
+    .online-indicator {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .users-requested {
+        padding: 1vw;
+        overflow-y: scroll;
+        height: 130vw;
+    }
+
+    .user-info {
+        padding: 2.5vw;
+        margin: 3vw 0;
+        border-radius: 2vw;
+        opacity: 50%;
+    }
+
+    .user-info p {
+        font-size: 3.6vw;
+    }
+
+    .chat-right-side {
+        height: 100%;
+        margin: 0;
+    }
+
+    .chat-template {
+        height: 150vw;
+        padding: 3vw;
+    }
+
+    .admin-chat {
+        margin-bottom: 4vw;
+        width: 33vw;
+        padding: 2vw;
+        border-radius: 3vw;
+        font-size: 3vw;
+        font-weight: 600;
+        line-height: 4vw;
+    }
+
+    .user-chat {
+        width: 33vw;
+        margin-bottom: 4vw;
+        padding: 2vw;
+        border-radius: 3vw;
+        font-size: 3vw;
+        font-weight: 600;
+        line-height: 4vw;
+    }
+
+    .time-size {
+        font-size: 2vw;
+    }
+
+    .admin-message-input textarea {
+        font-size: 3.6vw;
+        padding: 2vw;
+    }
+
+    .admin-message-input button {
+        font-size: 4vw;
+        width: 20vw;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .three-dots-options {
+        right: -30vw;
+        top: 23vw;
+        width: 30vw;
+    }
+
+    .three-dots-options a {
+        font-size: 3.6vw;
+        width: 30vw;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="برنامه نویسی سایت به صورت اختصاصی از صفر نا صد، حرفه ای، امنیت بالا، سرعت بالا">
+    <link rel="icon" href="/static/images/web-icon.png" type="image/png">
+    <link rel="stylesheet" href="/static/css/cv.css">
+    <title>نمونه کار ها | برنامه نویسی وب</title>
+</head>
+
+<body>
+    <div class="cv-app">
+        {% include 'includes/navbar.html' %}
+        <div class="cv-white-space"></div>
+        <header class="cv-header">
+            <div class="cv-header-content">
+                <article class="cv-article">
+                    <p class="cv-welcome-p">خوش آمدید</p>
+                    <div class="cv-article-text">
+                        <div class="cv-text-border"></div>
+                        <p class="cv-article-p">
+                            سلام به شمای عزیز که مشتاق هستی برخی از نمونه کار های من رو در این قسمت از وب سایت مشاهده کنید
+                        </p>
+                        <h1>
+                            من با علاقه ی زیادی برنامه نویسی رو یاد گرفتم و سعی کردم در هنگام یادگیری درست اموزش ببینم تا پروژه های که انجام میدم از استاندارد های جهانی پیروی کنند پس در جریان باشین کیفیت در اولویت کار من هست
+                        </h1>
+                    </div>
+                </article>
+            </div>
+        </header>
+
+        <div class="cv-content">
+            <h1 class="cv-content-p"><i class="fa fa-arrow-down"></i> نمونه کار ها</h1>
+            {% for i in cv %}
+            <a href="{% url 'cv:cv_details' pk=i.id %}">
+                <div class="cv-item">
+                    <div class="cv-item-img">
+                        <img src="{{ i.main_img.url }}" class="">
+                    </div>
+                    <div class="cv-details">
+                        <h1 class="cv-article-title">
+                            {{ i.title }}
+                        </h1>
+                        <h1 class="cv-article-info">
+                            {{ i.body }}
+                        </h1>
+                        <div class="cv-article-info-customer">
+                            {{ i.customer }}
+                        </div>
+                    </div>
+                    <p class="show-details">مشاهده جزئیات</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+
+        {% include 'includes/footer.html' %}
+    </div>
+
+    <script src="/static/js/navbars.js"></script>
+</body>
+
+</html>

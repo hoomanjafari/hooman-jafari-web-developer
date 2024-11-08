@@ -1,0 +1,149 @@
+@import url('/static/css/navbars.css');
+@import url('/static/Fonts/font-awesome-4.7.0/css/font-awesome.min.css');
+@import url('/static/css/footer.css');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contact-white-space {
+    display: none;
+}
+
+/*----------------------------------------------------------*/
+
+.contact-form {
+    width: 50vw;
+    padding: 2vw;
+    margin: 0 auto;
+    background-color: #e8f6ff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 1vw;
+}
+
+.errorlist {
+    width: 100%;
+    color: red;
+    font-size: 1.3vw;
+    margin: 1vw 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 35vw;
+    font-size: 1.3vw;
+    padding: 0.5vw 2vw;
+    margin: 2vw 0;
+    resize: none;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.contact-form button {
+    border: none;
+    background-color: #002b53;
+    color: white;
+    padding: 0.5vw 6vw;
+    font-size: 1.5vw;
+    border-radius: 1vw;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    opacity: 60%;
+    transition: 0.3s;
+}
+
+.contact-content {
+    text-align: center;
+    margin-bottom: 3vw;
+}
+
+.contact-content h3 {
+    margin: 4vw 0 6vw 0;
+    color: #002b53;
+    font-size: 3vw;
+}
+
+.message {
+    font-size: 1.6vw;
+    transition: 2s;
+    margin: 3vw auto;
+    padding: 1vw 3vw;
+    width: 80%;
+    border-radius: 1vw;
+}
+
+.success {
+    background-color: #098080;
+    color: white;
+}
+
+.danger {
+    background-color: #c02727;
+    color: white;
+}
+
+@media (max-width: 1023.98px) {
+    .contact-white-space {
+        height: 26vw;
+        display: block;
+    }
+
+    .contact-content h3 {
+        margin: 6vw 0;
+        padding: 0;
+        font-size: 5vw;
+        font-weight: 600;
+    }
+    .contact-form {
+        width: 80%;
+        padding: 6vw 0;
+        margin: 6vw auto;
+        border-radius: 2vw;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 50vw;
+        font-size: 4vw;
+        padding: 1.5vw 5vw;
+        margin: 3vw 0;
+    }
+
+    .contact-form-button {
+        width: 100%;
+    }
+
+    .contact-form button {
+        padding: 1.5vw 6vw;
+        font-size: 4vw;
+        border-radius: 2vw;
+    }
+
+    .message {
+        font-size: 4vw;
+        margin: 5vw auto;
+        padding: 2vw 4vw;
+        border-radius: 2vw;
+    }
+    .errorlist {
+        font-size: 3vw;
+        margin: 2vw 0;
+    }
+}

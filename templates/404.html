@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/404.css">
+    <title>صحفه مورد نظر یاقت نشد</title>
+</head>
+<body>
+    {% include 'includes/navbar.html' %}
+    <main class="not-found-main">
+        <section class="not-found-box">
+            <p class="not-found-text">صفحه مورد نظر وجود ندارد !</p>
+            <p class="not-found-text-2">ادرس وارد شده اشتباه است</p>
+            <a href="{% url 'home:home' %}">برو به صفحه اصلی</a>
+        </section>
+    </main>
+    {% include 'includes/footer.html' %}
+</body>
+</html>

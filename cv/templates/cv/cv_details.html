@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="برنامه نویسی سایت به صورت اختصاصی از صفر نا صد، حرفه ای، امنیت بالا، سرعت بالا">
+    <link rel="icon" href="/static/images/web-icon.png" type="image/png">
+    <link rel="stylesheet" href="/static/css/cv_details.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>جزئیات نمونه کارها | برنامه نویسی وب</title>
+</head>
+
+<body>
+    {% include 'includes/navbar.html' %}
+    <div class="cv-details-white-space"></div>
+    <main class="cv-details-main-container">
+    {% for i in cv_selected %}
+        <div class="cv-details-img">
+            <h2>
+                جزئیات نمونه کار
+            </h2>
+            <div class="swiper mySwiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    {% if i.img_one != '' %}
+                    <div class="swiper-slide">
+                        <div class="swiper-slide-item">
+                            <img src="{{ i.img_one.url }}">
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if i.img_two != '' %}
+                    <div class="swiper-slide">
+                        <div class="swiper-slide-item">
+                            <img src="{{ i.img_two.url }}">
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if i.img_three != '' %}
+                    <div class="swiper-slide">
+                        <div class="swiper-slide-item">
+                            <img src="{{ i.img_three.url }}">
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if i.img_four != '' %}
+                    <div class="swiper-slide">
+                        <div class="swiper-slide-item">
+                            <img src="{{ i.img_four.url }}">
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if i.img_five != '' %}
+                    <div class="swiper-slide">
+                        <div class="swiper-slide-item">
+                            <img src="{{ i.img_five.url }}">
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if i.img_six != '' %}
+                    <div class="swiper-slide">
+                        <div class="swiper-slide-item">
+                            <img src="{{ i.img_six.url }}">
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+        </div>
+
+        <div class="cv-details-info-box">
+            <div class="cv-details-customer">{{ i.customer }}</div>
+            <h1 class="cv-details-title">
+                {{ i.title }}
+            </h1>
+            <h2 class="cv-details-summery">
+                {{ i.body }}
+            </h2>
+            <h3 class="cv-details-special-options-title">
+                فابلیت های ویژه وبسایت :
+            </h3>
+            <h1 class="cv-details-special-options-text">
+                {{ i.details|linebreaks }}
+            </h1>
+        </div>
+    </main>
+
+
+    {% endfor %}
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/static/js/navbars.js"></script>
+    <script src="/static/js/cv_details.js"></script>
+</body>
+
+</html>

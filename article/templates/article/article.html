@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="برنامه نویسی سایت به صورت اختصاصی از صفر نا صد، حرفه ای، امنیت بالا، سرعت بالا">
+    <link rel="icon" href="/static/images/web-icon.png" type="image/png">
+    <title>مقالات | برنامه نویسی وب</title>
+    <link rel="stylesheet" href="/static/css/article.css">
+</head>
+
+<body>
+    <div class="app-article">
+        {% include 'includes/navbar.html' %}
+        <div class="article-white-space"></div>
+        <div class="article-content">
+
+            <h1>
+                 مطالعه مقالات برنامه نویسی دیجنگو
+            </h1>
+
+            {% for i in article %}
+            <div class="article-item">
+                <div class="img-subject">
+                    <img src="{{ i.image.url }}">
+
+                    <div class="article-mini-box">
+                        <p>{{ i.tag }}</p>
+                    </div>
+                </div>
+                <h2>
+                    {{ i.subject }}
+                </h2>
+
+                <p class="article-item-p">
+                    {{ i.body }}
+                </p>
+            </div>
+            {% empty %}
+                <p class="no-article-yet"> هنوز مقاله ای افزوده نشده</p>
+            {% endfor %}
+
+        </div>
+
+        {% include 'includes/footer.html' %}
+    </div>
+
+
+    <script src="/static/js/navbars.js"></script>
+</body>
+
+</html>

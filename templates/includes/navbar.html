@@ -1,0 +1,47 @@
+<!-- ----------------------------------( header and navbar's )-------------------------------------------->
+<header class="header-main">
+    <nav class="header-nav">
+        <div class="header-home-logo">
+            <a href="{% url 'home:home' %}"><img src="/static/images/home-logo.jpg" alt="home-logo"></a>
+        </div>
+        <ul class="header-ul" id="header-ul">
+            <li><a href="{% url 'about-us:about_us' %}">درباره من</a></li>
+            <li><a href="{% url 'cv:cv_page' %}">نمونه کار ها</a></li>
+            <li><a href="{% url 'contact:contact' %}">ارتباط با ما</a></li>
+            <li><a href="{% url 'article:article' %}">مقالات</a></li>
+        </ul>
+    </nav>
+
+
+</header>
+<nav class="responsive-fixed-nav">
+    <button class="burger_btn" id="burger_btn" type="button"><i class="fa fa-bars"></i></button>
+    <a href="{% url 'home:home' %}"><img src="/static/images/home-logo.jpg" alt="logo-image" class="responsive-header-logo-img"></a>
+</nav>
+<section class="mobile-menu-bar-container" id="mobile-menu-bar-container">
+    <div class="mobile-menu-close-btn">
+        <button type="button" id="mobile-menu-close-btn">
+            <i class="fa fa-window-close" id="window-close"></i>
+        </button>
+    </div>
+    <div class="mobile-menu-bar-box" id="mobile-menu-bar-box">
+        <ul class="mobile-menu-bar-ul">
+            <li>
+                <i class="fa fa-info"></i>
+                <a href="{% url 'about-us:about_us' %}">درباره من</a>
+            </li>
+            <li>
+                <i class="fa fa-file"></i>
+                <a href="{% url 'cv:cv_page' %}">نمونه کار ها</a>
+            </li>
+            <li>
+                <i class="fa fa-address-book"></i>
+                <a href="{% url 'contact:contact' %}">ارتباط با ما</a>
+            </li>
+            <li>
+                <i class="fa fa-book"></i>
+                <a href="{% url 'article:article' %}">مقالات</a>
+            </li>
+        </ul>
+    </div>
+</section>

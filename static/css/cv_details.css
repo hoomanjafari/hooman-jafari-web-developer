@@ -1,0 +1,168 @@
+@import url('/static/css/navbars.css');
+@import url('/static/Fonts/font-awesome-4.7.0/css/font-awesome.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* --------------------------------------------------------------- */
+
+.cv-details-white-space {
+    height: 20vw;
+    display: none;
+}
+
+.cv-details-main-container {
+    padding: 4vw;
+    line-height: 3vw;
+}
+
+.cv-details-info-box {
+    padding: 2vw 6vw;
+}
+
+.cv-details-img {
+    text-align: center;
+}
+
+.cv-details-img h2 {
+    color: #0f3c6e;
+    font-size: 3vw;
+    margin: 2vw 0;
+}
+
+.cv-details-img img {
+    width: 80vw;
+}
+
+.cv-details-title {
+    font-size: 2.5vw;
+    color: #0f3c6e;
+}
+
+.cv-details-summery {
+    font-size: 1.6vw;
+    color: #0f3c6e;
+    margin: 2vw 0;
+}
+
+.cv-details-customer {
+    font-size: 2vw;
+    color: #c02727;
+    text-align: center;
+}
+
+.cv-details-special-options-title {
+    font-size: 2.5vw;
+    color: #0f3c6e;
+    margin: 3vw 0;
+}
+
+.cv-details-special-options-text {
+    font-size: 1.6vw;
+    color: #0f3c6e;
+}
+
+/* ---------------------------------( cv_swiper )--------------------------------- */
+
+.swiper {
+    margin-bottom: 3vw;
+    background-color: #e8f6ff;
+}
+
+.swiper-button-prev,
+.swiper-button-next  {
+    padding: 2vw !important;
+    margin: 0 2vw !important;
+    background-color: #0f3c6e;
+    color: white !important;
+    border-radius: 50%;
+    border: none;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    opacity: 60%;
+    transition: 0.2s;
+} 
+
+
+
+.swiper-slide-item {
+    text-align: center;
+    padding: 2vw 0;
+}
+
+.swiper-slide-item img {
+    width: 60vw;
+}
+
+@media (max-width: 1023.98px) {
+
+    .cv-details-white-space {
+        display: block;
+    }
+    .cv-details-img h2 {
+        font-size: 5vw;
+        margin: 6vw 0;
+    }
+
+    .cv-details-img img {
+        width: 90vw;
+        height: 60vw;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next  {
+        padding: 0 !important;
+        margin: 0 !important;
+        color: #0f3c6e !important;
+        background: none;
+        border-radius: 50%;
+        border: none;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 6vw !important;
+    }
+
+    .swiper-slide-item {
+        padding: 6vw 0;
+    }
+
+    .cv-details-info-box {
+        line-height: 7vw;
+    }
+
+    .cv-details-title {
+        font-size: 5.5vw;
+        margin: 3vw 0;
+    }
+
+    .cv-details-summery {
+        font-size: 3.5vw;
+    }
+
+    .cv-details-customer {
+        font-size: 3vw;
+    }
+
+    .cv-details-special-options-title {
+        font-size: 5.5vw;
+        margin: 9vw 0;
+    }
+
+    .cv-details-special-options-text {
+        font-size: 3.5vw;
+        line-height: 9vw;
+    }
+}

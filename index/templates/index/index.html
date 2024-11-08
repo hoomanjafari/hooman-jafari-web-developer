@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="FSIMMkBwVccveg_Dn9u1m6PbvguiuD5L9baTPnYvv5E" />
+    <meta name="description" content="برنامه نویسی سایت به صورت اختصاصی از صفر نا صد، حرفه ای، امنیت بالا، سرعت بالا">
+    <link rel="icon" href="/static/images/web-icon.png" type="image/png">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <title>برنامه نویسی وب سایت | هومان جعفری</title>
+</head>
+
+<body>
+    {% include 'includes/live_support.html' %}
+    {% include 'includes/navbar.html' %}
+
+    <!-- ----------------------------------------------------------------------------------------------------->
+    <div class="index-white-space"></div>
+    <main class="index-main">
+        <section class="index-main-about-us">
+            <div class="index-about-me-box">
+                <div class="me-image">
+                    <img src="/static/images/hoomanjunejafari.jpg" alt="me-image">
+                </div>
+                <div class="index-about-me">
+                    <h1 class="index-about-me-name">
+                        هومان جعفری
+                    </h1>
+                    <ul class="me-social-media-ul">
+                        <li><a target="_blank" href="https://www.instagram.com/hooman_jafari76?igsh=MW10bzZoMTVsYzJheA=="><i class="fa fa-instagram"></i></a></li>
+                        <li><a target="_blank" href="https://t.me/hooman76"><i class="fa fa-telegram"></i></a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/in/hooman-jafari-318b69304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                    <h1 class="index-about-me-python">برنامه نویس پایتون</h1>
+                    <div class="me-information">
+                        <p>مرکزی اراک <i class="fa fa-map-marker"></i></p>
+                        <p class="me-information-font-e">9372518997 98+ <i class="fa fa-mobile"></i></p>
+                        <p class="me-information-font-e email-size">hoomanjafari.py@gmail.com <i class="fa fa-envelope"></i></p>
+                        <a target="_blank" href="https://github.com/hoomanjafari">hoomanjafari <i class="fa fa-github"></i></a>
+                    </div>
+                    {% for hoomi in hooman %}
+                        <a class="cv-download" href="{{ hoomi.resume.url }}">دانلود رزومه</a>
+                    {% endfor %}
+                </div>
+                <div class="level-up-blue-img">
+                    <img src="/static/images/level-up-blue.jpg">
+                </div>
+            </div> 
+
+            <div class="job-solution">
+                <h1 class="text-border">دوست داری محصول یا خدماتی که ارائه میدهی رو به صورت انلاین هم انجامش بدی ؟</h1><br>
+                <p class="job-solution-margin-bottom">
+                    اگه برات اهمیت داره تو این دوره که اینترنت و فضای مجازی با سرعت بالایی در حال رشد است، از بازار کسب انلاین عقب نباشی توضیحاتی که پایین تر قرار دادم رو مطالعه بکن .
+                </p><br>
+
+                <h1 class="text-border">بخشی از مزایای داشتن کسب و کار انلاین :</h1>
+                <p>با پیشرفت اینترنت و استقبال تمامی افراد از رسانه های اجتماعی خیلی هوشمندانه است که از این فضای ایجاد
+                    شده استفاده کنیم و کسب و کار خودمون رو انلاین کنیم که همین امر باعث میشه : </p><br>
+                <p>1- دسترسی به بازار فروش بسیار گسترده تر شود .</p><br>
+                <p>2- مشتریان راحت تر خرید خودشونو انجام بدهند .</p><br>
+                <p class="job-solution-margin-bottom">3- امکان دیده شدن در فضایی نا محدود که موجب به تبلیغ برای محصول یا خدماتی که ارائه میدهید میشود.</p>
+                <br>
+                <h1 class="text-border">نقش وب سایت در کسب و کار یا خدماتی که ارائه میشود چیست ؟</h1>
+                <p> با فعالیت در فضای مجازی و رسانه های اجتماعی ما کمک می کنیم به بهتر دیده شدن برند محصول (تبلیغ فروشگاهمون) و نوع
+                    فعالیتی که داریم و از یک جایی به بعد برای تجربه ی خیلی راحت تر و منطقی تر، مشتریان نیاز دارن
+                    که
+                    محصولات ما رو به صورت دسته بندی و طبقه بنده شده با تمام جزئیات مشاهده کنن و راحت تر محصول مورد نظر
+                    خودشون رو در بین انبوهی از محصولات فروشگاه پیدا کنن</p><br>
+                <p class="job-solution-margin-bottom">و یا در کسب و کار های خدماتی کاربران می توانن هر کدوم حساب کاربری شخصی داشته باشن و خیلی راحت تر از
+                    وضعیت خدماتی که دریافت می کنن اگاه بشن و همچنین مدیران و صاحبان کار به صورت حرفه ای توانایی کنترل بر
+                    وضعیت مشتریان خود را دارن .</p>
+            </div>
+        </section>
+        <div class="why-website-blue-arrow-img">
+            <img src="/static/images/blue-arrow-png-36991 (1).png" alt="blue-arrow-image">
+        </div>
+        <div class="why-website-contact-us">
+            <h1>این توضیحات خیلی مختصر بود که وقت زیادی از شما نگیره برای اطلاعات بیشتر میتوانید با ما مشاوره
+                رایگان داشته باشین
+            </h1>
+            <a href="{% url 'contact:contact' %}">مشاوره رایگان</a>
+        </div>
+    </main>
+
+    {% include 'includes/footer.html' %}
+
+
+    <script src="/static/js/live_support.js"></script>
+    <script src="/static/js/navbars.js"></script>
+</body>
+
+</html>

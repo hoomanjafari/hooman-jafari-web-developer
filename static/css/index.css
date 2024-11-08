@@ -1,0 +1,398 @@
+@import url('/static/Fonts/font-awesome-4.7.0/css/font-awesome.min.css');
+@import url('/static/css/navbars.css');
+@import url('/static/css/footer.css');
+@import url('/static/css/live_support.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+.index-white-space {
+    height: 30vw;
+    display: none;
+}
+
+/* -------------------------------------( main-content )------------------------------------------------- */
+
+.index-main-about-us {
+    padding: 6vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20vw;
+}
+
+.index-main-about-us a:hover {
+    opacity: 60%;
+    transition: 0.3s;
+}
+
+.job-solution {
+    width: calc(calc(100% / 2) - 6vw);
+    order: 1;
+}
+
+.job-solution h1 {
+    color: #004485;
+    font-size: 2vw;
+}
+
+.text-border {
+    position: relative;
+    padding: 2vw 0;
+}
+
+.text-border::before {
+    width: 100%;
+    height: 2px;
+    background-color: #002b53;
+    position: absolute;
+    top: 0.3vw;
+    left: 0;
+    content: "";
+}   
+
+.text-border::after {
+    width: 6vw;
+    height: 6px;
+    background-color: #7cbbe7;
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: "";
+    z-index: 2;
+}
+
+
+.job-solution p {
+    font-size: 1.4vw;
+    line-height: 2.5vw;
+    font-weight: 600;
+}
+
+.index-about-me-box {
+    text-align: center;
+    order: 2;
+}
+
+.me-image {
+    margin-bottom: -4vw;
+}
+
+.me-image img {
+    width: 19vw;
+    border-radius: 2vw;
+}
+
+.index-about-me {
+    background-color: #f2f9ff;
+    padding: 4vw 2vw 2vw;
+    border-radius: 2vw;
+}
+
+.index-about-me-name {
+    font-size: 2vw;
+    font-weight: 600;
+    color: #002b53;
+}
+
+.index-about-me-python {
+    font-size: 1.5vw;
+    margin-right: auto;
+    background-color: #d7ecff;
+    width: 19vw;
+    padding: 0.5vw 2vw;
+    border-radius: 2vw 2vw 0 0;
+    color: #002b53;
+    text-align: center;
+}
+
+.me-social-media-ul li {
+    display: inline-block;
+    margin: 1.3vw;
+}
+
+.me-social-media-ul a {
+    color: #004485;
+    font-size: 1.7vw;
+}
+
+.me-information {
+    text-align: center;
+    width: 19vw;
+    padding: 2vw;
+    background-color: #d7ecff;
+    border-radius: 0 0 2vw 2vw;
+    margin: 1vw 0 2vw;
+    line-height: 3vw;
+}
+
+.me-information p,
+.me-information a {
+    font-size: 1.4vw;
+    color: #002b53;
+}
+
+.me-information-font-e {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cv-download {
+    font-size: 1.6vw;
+    padding: 0.5vw 3vw;
+    background-color: #c02727;
+    color: white;
+    border-radius: 0.5vw;
+}
+
+.level-up-blue-img {
+    height: 50vw;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.level-up-blue-img img {
+    width: 25vw;
+}
+
+/* ---------------------------------( main-blueArrow-contact-us )------------------------------------------ */
+
+.why-website-contact-us {
+    width: 50vw;
+    margin: 0 auto 3vw;
+    padding: 2vw;
+    display: grid;
+    justify-content: center;
+    background-color: #f2f9ff;
+    border-radius: 1vw;
+}
+
+.why-website-contact-us h1 {
+    font-size: 1.5vw;
+    width: 40vw;
+    text-align: center;
+    color: #002b53;
+}
+
+.why-website-contact-us a {
+    width: 9vw;
+    font-size: 2vw;
+    background-color: crimson;
+    color: white;
+    padding: 0.5vw 2vw;
+    border-radius: 1vw;
+    margin: 2vw auto;
+}
+
+.why-website-contact-us a:hover {
+    opacity: 60%;
+    transition: 0.3s;
+}
+
+.why-website-blue-arrow-img {
+    position: absolute;
+    left: 45vw;
+}
+
+.why-website-blue-arrow-img img {
+    width: 12vw;
+    margin-top: -9vw;
+}
+
+
+/* -----------------------------( responsive-codes )-------------------------------------- */
+
+@media (max-width: 1023.98px) {
+    .header-main {
+        display: none;
+    }
+
+    .responsive-fixed-nav {
+        display: flex;
+    }
+
+    .job-solution-margin-bottom {
+        margin-bottom: 13vw;
+    }
+
+    /* ------------------( main-content )-------------------------- */
+
+    .index-main-about-us {
+        gap: 10vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .index-about-me-box {
+        width: 80%;
+        margin: 0 auto;
+        order: 1;
+    }
+
+    .index-about-me {
+        padding-top: 9vw;
+    }
+
+    .index-about-me-python {
+        font-size: 4vw;
+        margin: 2vw auto;
+        width: 30vw;
+        padding: 1vw 17vw ;
+    }
+
+    .me-information {
+        margin: 1vw auto 4vw;
+        width: 60vw;
+    }
+
+    .me-information p,
+    .me-information a {
+        font-size: 4vw;
+        line-height: 9vw;
+    }
+
+    .cv-download {
+        font-size: 4.4vw;
+        padding: 2vw 7vw;
+        border-radius: 1.5vw;
+    }
+
+    .email-size {
+        font-size: 3.5vw !important;
+    }
+
+    .me-social-media-ul a {
+        font-size: 6vw;
+    }
+
+    .me-social-media-ul li {
+        margin: 2vw 4vw;
+    }
+
+    .index-about-me-name {
+        font-size: 4vw;
+    }
+    
+    .job-solution {
+        width: 90%;
+        margin: 0 auto 4vw;
+        order: 2;
+    }
+
+    .job-solution h1 {
+        font-size: 4.5vw;
+    }
+
+    .job-solution p {
+        font-size: 3.5vw;
+        line-height: 7vw;
+    }
+
+    .me-image {
+        margin-bottom: -9vw;
+    }
+
+    .me-image img {
+        width: 50vw;
+        border-radius: 2vw;
+    }
+    
+    .index-white-space {
+        display: block;
+    }
+
+    .level-up-blue-img {
+        display: none;
+    }
+
+    .text-border {
+        position: relative;
+        padding: 5vw 0;
+        margin: 3vw 0;
+    }
+    
+    .text-border::before {
+        width: 100%;
+        height: 6px;
+        top: 0.6vw;
+    }   
+    
+    .text-border::after {
+        width: 20vw;
+        height: 12px;
+    }
+
+    .why-website-blue-arrow-img {
+        position: absolute;
+        left: 45vw;
+    }
+
+    .why-website-blue-arrow-img img {
+        width: 16vw;
+        margin-top: -4vw;
+    }
+
+    .why-website-contact-us {
+        width: 80vw;
+        margin: 9vw auto;
+    }
+
+    .why-website-contact-us h1 {
+        font-size: 6vw;
+        line-height: 9vw;
+        width: 70vw;
+    }
+
+    .why-website-contact-us a {
+        font-size: 5vw;
+        width: 33vw;
+        text-align: center;
+        font-weight: 600;
+    }
+    
+}
+
+@media (max-width: 767.98px) {
+
+    .text-border::before {
+        width: 100%;
+        height: 3px;
+        top: 1vw;
+    }   
+    
+    .text-border::after {
+        width: 30vw;
+        height: 6px;
+    }
+
+    .text-border {
+        position: relative;
+        padding: 4vw 0;
+    }
+
+    .job-solution h1 {
+        font-size: 4.5vw;
+        line-height: 6vw;
+    }
+
+    .job-solution p {
+        font-size: 3vw;
+        line-height: 6vw;
+        margin: 0;
+    }
+
+}

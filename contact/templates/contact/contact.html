@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="برنامه نویسی سایت به صورت اختصاصی از صفر نا صد، حرفه ای، امنیت بالا، سرعت بالا">
+    <link rel="icon" href="/static/images/web-icon.png" type="image/png">
+    <title>ارتباط با ما | برنامه نویسی وب</title>
+    <link rel="stylesheet" href="/static/css/contact.css">
+</head>
+<body>
+    <div class="contact-app">
+        {% include 'includes/navbar.html' %}
+        <div class="contact-white-space"></div>
+        <div class="contact-content">
+            <h3>اطلاعات خود را برای مشاوره رایگان وارد کنید</h3>
+            {% if messages %}
+                {% for i in messages %}
+                    <p class="message {{ i.tags }}" id="message">{{ i.message }}</p>
+                {% endfor %}
+            {% endif %}
+            <form method="post" class="contact-form" action="{% url 'contact:contact' %}" novalidate>
+                {% csrf_token %}
+                <input name="subject" type="text" placeholder="موضوع ">
+                <p>{{ form.errors.subject }}</p>
+                <input name="email" type="email" placeholder="ایمیل ">
+                <p>{{ form.errors.email }}</p>
+                <input name="number" type="number" placeholder="شماره تماس ">
+                <p>{{ form.errors.number }}</p>
+                <textarea name="body" placeholder="پیام خود را بنویسید" rows="4"></textarea><br>
+                <p>{{ form.errors.body }}</p>
+                <div class="contact-form-button">
+                    <button type="submit">ارسال</button>
+                </div>
+            </form>
+        </div>
+
+        {% include 'includes/footer.html' %}
+    </div>
+
+    <script>
+        const message = document.getElementById('message');
+        window.addEventListener('load', () => {
+            if (message.classList.contains('success') || message.classList.contains('danger')) {
+                setTimeout(() => {
+                    message.style.opacity = '0';
+                }, 5000)
+            }
+        })
+    </script>
+    <script src="/static/js/navbars.js"></script>
+</body>
+</html>

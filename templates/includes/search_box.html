@@ -1,0 +1,19 @@
+<div class="search-box">
+    <button class="search-cross" onclick="HiddenSearch()">
+        <i class="fa fa-window-close fs-2 text-light"></i>
+    </button>
+    <div class="search-box-body">
+        <h3>متن خود را بنویسید و اینتر کنید</h3>
+        <form method="get" action="{% url 'home:search-page' %}">
+            {% csrf_token %}
+            <input type="search" placeholder="Search ..." class="d-inline-block">
+            <button type="submit" class="text-secondary"><i class="fa fa-search fs-1"></i></button>
+        </form>
+    </div>
+</div>
+
+<script>
+function HiddenSearch() {
+    document.querySelector('.search-box').style.display = 'none'
+}
+</script>

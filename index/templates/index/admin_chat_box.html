@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>گفت و گو</title>
+    <link rel="stylesheet" href="/static/css/admin_chat_box.css">
+</head>
+<body>
+{#    {% include 'includes/navbar.html' %}#}
+{#    <div class="chat-white-space"></div>#}
+    <main>
+        <section class="admin-chat-container">
+            <div class="admin-chat-box">
+                <div class="chat-left-side">
+                    <header>
+                        <p class="admin-name"><i class="fa fa-user"></i> {{ request.user }}</p>
+                        <div class="admin-online-status" id="admin-online-status">
+                            {% if not online %}
+                                <p id="admin-online-status-p">Offline</p>
+                                <div class="online-indicator" id="online-indicator"></div>
+                            {% elif online %}
+                                <p id="admin-online-status-p">Online</p>
+                                <div class="online-indicator online-indicator-color" id="online-indicator"></div>
+                            {% endif %}
+                        </div>
+                        <button id="remove-chat-connections-btn" type="button" class="remove-chat-connections-btn"><i class="fa fa-trash"></i></button>
+                        <button id="three-dots-btn" type="button" class="three-dots-btn"><i class="fa fa-ellipsis-v"></i></button>
+                        <div class="three-dots-options" id="three-dots-options">
+                            <a href="#" class="logout-disabled">خروج</a>
+                            <a href="{% url 'home:home' %}">صفحه نخست</a>
+                        </div>
+                    </header>
+                    <section class="users-requested" id="users-requested">
+                        {% for i in connections %}
+                            <div class="user-info" id="user-info">
+                                <p>{{ i.user_name }}</p>
+                                <p>{{ i.user_number }}</p>
+                            </div>
+                        {% empty %}
+                            <div class="user-info" id="no-requests-yet">
+                                <p>در حال حاضر هیچ درخواست پشتیبانی با شما وجود ندارد</p>
+                            </div>
+                        {% endfor %}
+                    </section>
+                </div>
+
+                <div class="chat-right-side">
+                    <div class="chat-template" id="chat-messages">
+                        <div class="admin-chat message">
+                            <p class="time-size">( 10/19 -- 6:30 )</p>
+                            سلام چه کمکی میتونم بکنم بهت ؟
+                        </div>
+                        <div class="user-chat message">
+                            <p>( 10/19 -- 6:30 )</p>
+                            سلام عزیز خوبی شما ؟
+                        </div>
+                        <div class="admin-chat message">
+                            <p class="time-size">( 10/19 -- 6:30 )</p>
+                            سلام چه کمکی میتونم بکنم بهت ؟
+                        </div>
+                        <div class="user-chat message">
+                            <p>( 10/19 -- 6:30 )</p>
+                            سلام عزیز خوبی شما ؟
+                        </div>
+                        <div class="user-chat message">
+                            <p>( 10/19 -- 6:30 )</p>
+                            سلام عزیز خوبی شما ؟
+                        </div>
+                    </div>
+                    <form class="admin-message-input">
+                        {% csrf_token %}
+                        <textarea id="admin-message-textarea" rows="1"></textarea>
+                        <button id="admin-msg-send-btn" type="button">ارسال</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+{#    <script src="/static/js/navbars.js"></script>#}
+    <script src="/static/js/admin_chat_box.js"></script>
+</body>
+</html>
